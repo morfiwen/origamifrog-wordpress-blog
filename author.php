@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 <section id="blog">
-    <div class="container">
-        <div class="blog-grid">
-            <div class="blog-column">
+  <div class="container">
+    <div class="blog-grid">
+      <div class="blog-column">
 
-                <?php the_post(); ?>
+        <?php the_post(); ?>
 
-               <div class="tile">
+          <div class="tile">
 
-				<h2 class="page-title author"><?php printf( __( 'Archiwum autora: <span class="vcard">%s</span>', 'hbd-theme' ), "<a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a>" ) ?></h2>
-				<?php $authordesc = $authordata->user_description; if ( !empty($authordesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $authordesc . '</div>' ); ?>
+    				<h2 class="page-title author"><?php printf( __( 'Archiwum autora: <span class="vcard">%s</span>' ), "<a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a>" ) ?></h2>
+    				<?php $authordesc = $authordata->user_description; if ( !empty($authordesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $authordesc . '</div>' ); ?>
 
-				<?php rewind_posts(); ?>
+    				<?php rewind_posts(); ?>
 
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
+    				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
                     <div class="nav-pagination">
                         <div class="nav-pagination">
                             <?php echo paginate_links( array(
