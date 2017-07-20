@@ -40,66 +40,66 @@
           <a href="<?php echo site_url(); ?>"><img class="header-img" alt="Origami Frog Blog" src="<?php bloginfo('template_url')?>/img/origamifrog_header.png"></a>
         </div>
       </div>
-    </div>
 
-    <nav>
-      <div class="menu-navigation">
-        <div class="mobile-nav-toggle">
-          <span> </span>
-        </div>
-
-        <ul class="navlist">
-
-          <?php wp_list_categories('orderby=name&title_li=&use_desc_for_title=0');
-          $this_category = get_category($cat);
-          if (get_category_children($this_category->cat_ID) != "") {
-              echo "<ul>";
-              wp_list_categories('orderby=id&show_count=0&title_li=
-                  &use_desc_for_title=0&child_of='.$this_category->cat_ID);
-              echo "</ul>";
-          }
-          ?>
-
-          <li><a class="link-bg" href="<?php echo site_url(); ?>/o-mnie/">O mnie</a></li>
-          <li><a class="link-bg" href="<?php echo site_url(); ?>/wspolpraca/">Współpraca</a></li>
-        </ul>
-
-        <div class="search-box">
-          <i class="icon-search icon-search-box"></i>
-          <div class="search-box-form">
-            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-              <label>
-                <span class="screen-reader-text"><?php echo _x( 'Szukaj:', 'label' ) ?></span>
-                <input type="search" class="search-field"
-                    placeholder="<?php echo esc_attr_x( 'Szukaj …', 'placeholder' ) ?>"
-                    value="<?php echo get_search_query() ?>" name="s"
-                    title="<?php echo esc_attr_x( 'Szukaj:', 'label' ) ?>" />
-              </label>
-              <input type="submit" class="search-submit btn btn-green"
-                    value="<?php echo esc_attr_x( 'Szukaj', 'submit button' ) ?>" />
-            </form>
+      <nav>
+        <div class="menu-navigation">
+          <div class="mobile-nav-toggle">
+            <span> </span>
           </div>
+
+          <ul class="navlist">
+
+            <?php wp_list_categories('orderby=name&title_li=&use_desc_for_title=0');
+            $this_category = get_category($cat);
+            if (get_category_children($this_category->cat_ID) != "") {
+                echo "<ul>";
+                wp_list_categories('orderby=id&show_count=0&title_li=
+                    &use_desc_for_title=0&child_of='.$this_category->cat_ID);
+                echo "</ul>";
+            }
+            ?>
+
+            <li><a class="link-bg" href="<?php echo site_url(); ?>/o-mnie/">O mnie</a></li>
+            <li><a class="link-bg" href="<?php echo site_url(); ?>/wspolpraca/">Współpraca</a></li>
+          </ul>
+
+          <div class="search-box">
+            <i class="icon-search icon-search-box"></i>
+            <div class="search-box-form">
+              <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                <label>
+                  <span class="screen-reader-text"><?php echo _x( 'Szukaj:', 'label' ) ?></span>
+                  <input type="search" class="search-field"
+                      placeholder="<?php echo esc_attr_x( 'Szukaj …', 'placeholder' ) ?>"
+                      value="<?php echo get_search_query() ?>" name="s"
+                      title="<?php echo esc_attr_x( 'Szukaj:', 'label' ) ?>" />
+                </label>
+                <input type="submit" class="search-submit btn btn-green"
+                      value="<?php echo esc_attr_x( 'Szukaj', 'submit button' ) ?>" />
+              </form>
+            </div>
+          </div>
+
         </div>
 
-      </div>
+        <div class="mobile-nav">
+          <ul class="mobile-navlist">
 
-      <div class="mobile-nav">
-        <ul class="mobile-navlist">
+              <?php wp_list_categories('orderby=name&title_li=');
+          		$this_category = get_category($cat);
+          		if (get_category_children($this_category->cat_ID) != "") {
+          		echo "<ul>";
+          		wp_list_categories('orderby=id&show_count=0&title_li=
+          		&use_desc_for_title=1&child_of='.$this_category->cat_ID);
+          		echo "</ul>";
+          		}
+          		?>
 
-            <?php wp_list_categories('orderby=name&title_li=');
-        		$this_category = get_category($cat);
-        		if (get_category_children($this_category->cat_ID) != "") {
-        		echo "<ul>";
-        		wp_list_categories('orderby=id&show_count=0&title_li=
-        		&use_desc_for_title=1&child_of='.$this_category->cat_ID);
-        		echo "</ul>";
-        		}
-        		?>
+            <li><a class="link-bg" href="<?php echo site_url(); ?>/o-mnie/">O mnie</a></li>
+            <li><a class="link-bg" href="<?php echo site_url(); ?>/wspolpraca/">Współpraca</a></li>
+          </ul>
+        </div>
 
-          <li><a class="link-bg" href="<?php echo site_url(); ?>/o-mnie/">O mnie</a></li>
-          <li><a class="link-bg" href="<?php echo site_url(); ?>/wspolpraca/">Współpraca</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
+      </nav>
+    </header>
+  </div>

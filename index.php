@@ -14,13 +14,13 @@
       </a>
     </div>
     <div class="popular-posts-item">
-      <a href="http://origamifrog.pl/diy-napis-liny/">
-        <img src="http://origamifrog.pl/wp-content/uploads/2016/07/diy_napis_z_liny_01.jpg" alt="DIY Napis z liny">
+      <a href="http://origamifrog.pl/bulgaria-2016-wazne-informacje-dojazd-i-ceny/">
+        <img src="http://origamifrog.pl/wp-content/uploads/2016/07/bulgaria_2016_ceny_dojazd_00.jpg" alt="Bułgaria 2016 ceny, dojazd, ważne informacje">
       </a>
     </div>
     <div class="popular-posts-item">
-      <a href="http://origamifrog.pl/kuskus-brokulem-parmezanem/">
-        <img src="http://origamifrog.pl/wp-content/uploads/2016/06/przepis_kuskus_brokul_parmezan_01.jpg" alt="Kuskus z brokułem i parmezanem">
+      <a href="http://origamifrog.pl/plakaty-do-druku-na-lato/">
+        <img src="http://origamifrog.pl/wp-content/uploads/2017/06/plakaty_do_druku_lato_01.jpg" alt="Plakaty do druku na lato">
       </a>
     </div>
   </div>
@@ -45,9 +45,9 @@
               <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
             </div>
 
-            <p class="post-body-short">
+            <div class="post-body-short">
               <?php the_excerpt(); ?>
-            </p>
+            </div>
 
             <div class="post-readmore">
               <a class="btn btn-green" href="<?php the_permalink(); ?>">Czytaj dalej</a>
